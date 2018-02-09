@@ -1,0 +1,25 @@
+
+@tailwind preflight;
+
+a {
+    @apply .no-underline .text-red-dark;
+}
+
+a:hover {
+    border-bottom-style: dotted;
+    @apply .border-b .border-red-dark;
+}
+
+a.no-style {
+    border: none;
+}
+
+.pill {
+    @apply .py-4 .px-6 .text-center .rounded-full .shadow .border-red-dark .border .text-red-dark;
+}
+
+.pill:hover {
+    @apply .bg-red-dark .text-white;
+}
+
+@tailwind utilities;
