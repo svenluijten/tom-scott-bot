@@ -25,8 +25,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->instance(Youtube::class, new Youtube(config('youtube.key')));
-
         $this->app->instance(GenericProvider::class, new GenericProvider([
             'clientId' => config('services.slack.client_id'),
             'clientSecret' => config('services.slack.client_secret'),

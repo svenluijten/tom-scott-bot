@@ -11,12 +11,14 @@ class SearchController extends Controller
 
     /**
      * @param \Illuminate\Http\Request $request
-     * @param \Alaouy\Youtube\Youtube  $youtube
      *
      * @return array
+     * @throws \Exception
      */
-    public function __invoke(Request $request, Youtube $youtube)
+    public function __invoke(Request $request)
     {
+        $youtube = new Youtube(config('youtube.key'));
+
         $response = $youtube->searchChannelVideos($request->get('text'), self::TOM_SCOTT_CHANNEL_ID);
 
         if ($videoId = $response[0]->id->videoId ?? null) {
