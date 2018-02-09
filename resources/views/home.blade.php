@@ -39,7 +39,9 @@
                 />
             </a>
 
-            <img src="" alt="A screenshot of the command at work">
+            <div class="flex justify-center">
+                <img src="{{ asset('img/demo.jpg') }}" alt="A screenshot of the command at work">
+            </div>
 
             <div class="flex md:flex-row flex-col mt-2">
                 <a href="#" class="pill m-2 flex-1">Home</a>
