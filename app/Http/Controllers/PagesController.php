@@ -10,4 +10,14 @@ class PagesController extends Controller
     {
         return view('home');
     }
+
+    public function support()
+    {
+        return view('support');
+    }
+
+    public function privacy()
+    {
+        return view('privacy');
+    }
 }
