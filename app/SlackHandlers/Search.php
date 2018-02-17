@@ -11,7 +11,7 @@ class Search extends BaseHandler
 {
     public function canHandle(Request $request): bool
     {
-        return true;
+        return $request->text !== 'help';
     }
 
     public function handle(Request $request): Response
