@@ -20,13 +20,7 @@ return [
      * until the first one whose `canHandle` method returns true.
      */
     'handlers' => [
-        //add your own handlers here
+        App\SlackHandlers\Help::class,
         App\SlackHandlers\Search::class,
-
-        //this handler will display instructions on how to use the various commands.
-        Spatie\SlashCommand\Handlers\Help::class,
-
-        //this handler will respond with a `Could not handle command` message.
-        Spatie\SlashCommand\Handlers\CatchAll::class,
     ],
 ];
